@@ -18,6 +18,10 @@
       width: 100%;
     }
 
+    #send-button {
+      width: 100%;
+    }
+
     #comment label {
       display: block;
     }
@@ -37,15 +41,44 @@
         <div id="recommend">
           <section>
             <h3> Recommanderez-vous ce produit à d'autres clients ?</h3>
+            <label for="recommendation-choice1"> <span>Oui</span>
+              <input type="radio" id="recommendation-choice1" name="recommendation-choice">
+            </label>
+            <label for="recommendation-choice2"> <span>Non</span>
+              <input type="radio" id="recommendation-choice2" name="recommendation-choice">
+            </label>
           </section>
         </div>
         <div id="rating">
           <h3>Donnez une note entre 1 et 5 :</h3>
+          <select name="" id="rating-value" required>
+            <option value="" hidden>Choisir</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
       </div>
-      <div id="comment">
+      <section id="comment">
         <h3>Ajoutez un commentaire!</h3>
-      </div>
+        <div>
+          <label for="comment-title"> <span>Titre:</span>
+            <input type="text" id="comment-title" 
+            placeholder="Que faut-il savoir sur le produit ?" required>
+          </label>
+        </div>
+        <div>
+          <label for="comment-text"> <span>Message:</span>
+            <textarea id="comment-text" required minlength="10"
+            placeholder="Au moins 10 caractères s'il vous plaît."></textarea>
+          </label>
+        </div>
+        <div>
+          <input type="submit" id="send-button" value="Envoyer">
+        </div>
+      </section>
     </form>
   </main>
 </body>

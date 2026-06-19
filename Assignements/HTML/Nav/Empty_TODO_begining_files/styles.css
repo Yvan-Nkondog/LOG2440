@@ -13,10 +13,6 @@ a {
     justify-content: space-evenly;
 }
 
-menu {
-    list-style-type: none;
-}
-
 /* Pour la page de chaque navigateur */
 
 .flex-row{
